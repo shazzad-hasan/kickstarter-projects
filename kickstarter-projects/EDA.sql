@@ -52,3 +52,7 @@ WHERE state IN ('failed')
   AND goal > 0
 ORDER BY main_category, pct_pledged DESC
 LIMIT 10;
+
+-- Save the cleaned dataset
+COPY ksprojects TO '/Users/macpro/Documents/Data Analytics/Data Analysis with SQL/analyzing-kickstarter-projects/ksprojects_cleaned.csv' CSV HEADER;
+
