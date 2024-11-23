@@ -1,6 +1,6 @@
 -- Create a table in the database that matches the columns of the csv file
 CREATE TABLE ksprojects (
-    id SERIAL PRIMARY KEY,
+    ID SERIAL PRIMARY KEY,
     name TEXT,
     category TEXT,
     main_category TEXT,
@@ -11,8 +11,8 @@ CREATE TABLE ksprojects (
 );
 
 -- Import the data from the csv file 
-COPY ksprojects (id, name, category, main_category, goal, pledged, state, backers)
-FROM '/ks-projects.csv'
+COPY ksprojects (ID, name, category, main_category, goal, pledged, state, backers)
+FROM '/Users/macpro/Documents/Git-Repos/data-analysis-with-sql/kickstarter-projects/ks-projects.csv'
 DELIMITER ','
 CSV HEADER;
 
